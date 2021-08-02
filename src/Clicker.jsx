@@ -4,10 +4,29 @@ import { useState } from "react";
 
 export function CounterNumberClik() {
   const initialCount = 0;
-  const [count, setCount] = useState(initialCount);
+  const [count1, setCount1] = useState(initialCount);
+  const [count2, setCount2] = useState(initialCount);
+  const [count3, setCount3] = useState(initialCount);
 
   return (
-    <div className="bigSquare">
+    <div className="clickerLine">
+      <ClickerOne
+        initialCount={initialCount}
+        count={count1}
+        setCount={setCount1}
+      />
+      <ClickerOne
+        initialCount={initialCount}
+        count={count2}
+        setCount={setCount2}
+      />
+      <ClickerOne
+        initialCount={initialCount}
+        count={count3}
+        setCount={setCount3}
+      />
+    </div>
+    /* <div className="bigSquare">
       <div className="numeroSquare">{count}</div>
       <div className="buttomSquare">
         <button className="buttomPlus" onClick={() => setCount(count + 1)}>
@@ -17,6 +36,34 @@ export function CounterNumberClik() {
           <i className="buttomNullI"> Reset </i>
         </button>
         <button className="buttomMinus" onClick={() => setCount(count - 1)}>
+          <i className="buttomMinusI"> - </i>
+        </button>
+      </div>
+    </div> */
+  );
+}
+
+function ClickerOne(props) {
+  return (
+    <div className="bigSquare">
+      <div className="numeroSquare">{props.count}</div>
+      <div className="buttomSquare">
+        <button
+          className="buttomPlus"
+          onClick={() => props.setCount(props.count + 1)}
+        >
+          <i className="buttomPlusI"> + </i>
+        </button>
+        <button
+          className="buttomNull"
+          onClick={() => props.setCount(props.initialCount)}
+        >
+          <i className="buttomNullI"> Reset </i>
+        </button>
+        <button
+          className="buttomMinus"
+          onClick={() => props.setCount(props.count - 1)}
+        >
           <i className="buttomMinusI"> - </i>
         </button>
       </div>
