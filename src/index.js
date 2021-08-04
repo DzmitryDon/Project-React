@@ -1,13 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import { CounterNumberClik } from "./CounterNumberClik";
-import reportWebVitals from "./reportWebVitals";
+import { App } from "./ButtomAddItems/App";
 
 ReactDOM.render(
-  <CounterNumberClik />,
+  <App />,
 
   document.getElementById("root")
 );
-
-reportWebVitals();
