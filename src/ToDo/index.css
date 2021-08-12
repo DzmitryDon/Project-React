@@ -1,0 +1,11 @@
+button {
+  background-color: green;
+  color: black;
+  width: 100px;
+  height: 30px;
+}
+
+input {
+  border-radius: 10%;
+  border-color: green;
+}
