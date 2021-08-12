@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { updateTodo } from "../Requests";
 
-export const ListItem = ({ listItem: { todo, id }, onUpdate }) => {
+export const ListItem = ({ listItem: { todo, id, completed }, onUpdate }) => {
   const [item, setItem] = useState(todo);
 
   const handleEdit = async () => {
@@ -30,6 +30,26 @@ export const ListItem = ({ listItem: { todo, id }, onUpdate }) => {
     }
   }
 
+  let flagCompleted = null;
+  if (completed) {
+    flagCompleted = (
+      <input
+        className="completed-item"
+        type="checkbox"
+        defaultChecked
+        onClick={handleEditCheckBox}
+      />
+    );
+  } else {
+    flagCompleted = (
+      <input
+        className="completed-item"
+        type="checkbox"
+        onClick={handleEditCheckBox}
+      />
+    );
+  }
+
   return (
     <div>
       <input
@@ -43,13 +63,8 @@ export const ListItem = ({ listItem: { todo, id }, onUpdate }) => {
       <button onClick={handleEdit}> Update</button>
 
       <label>
-        <input
-          className="completed-item"
-          type="checkbox"
-          //onChange={handleEditCheckBox}
-          onClick={handleEditCheckBox}
-        />
-        <span> Выполнено</span>
+        {flagCompleted}
+        <span> Выполнено </span>
       </label>
     </div>
   );

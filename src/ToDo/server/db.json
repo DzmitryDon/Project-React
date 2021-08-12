@@ -1,34 +1,53 @@
 {
+  "user": [
+    {
+      "name": "1",
+      "password": "1", 
+      "id": 1
+    }
+  ],
   "list": [
     {
       "todo": "55577kjhjk",
       "completed": false,
       "deleted": true,
+      "userId": 0,
       "id": 7
     },
     {
       "todo": "нун",
       "completed": false,
       "deleted": false,
+      "userId": 0,
       "id": 8
     },
     {
       "todo": "44",
-      "completed": false,
+      "completed": true,
       "deleted": false,
+      "userId": 0,
       "id": 9
     },
     {
       "todo": "",
       "completed": false,
       "deleted": true,
+      "userId": 0,
       "id": 10
     },
     {
       "todo": "Для удаления",
       "completed": false,
       "deleted": true,
+      "userId": 0,
       "id": 11
+    },
+    {
+      "todo": "hdfhd",
+      "completed": false,
+      "deleted": false,
+      "userId": 0,
+      "id": 12
     }
   ]
 }

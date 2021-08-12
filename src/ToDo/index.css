@@ -9,3 +9,29 @@ input {
   border-radius: 10%;
   border-color: green;
 }
+
+.header-user {
+  display: flex;
+  background-color: burlywood;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.header-login {
+  display: flex;
+  /* align-items: center; */
+  background-color: rgb(169, 157, 240);
+  color: brown;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+/*
+.header-user-user {
+  background-color: rgb(33, 14, 143);
+}
+*/
+.header-input {
+  background-color: rgb(202, 211, 193);
+  height: 20px;
+}

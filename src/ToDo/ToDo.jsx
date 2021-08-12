@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 //import "./index.css";
 import { AddItem } from "./Components/AddItem";
+import { HeaderUser } from "./Components/Header";
 import { TodoList } from "./Components/TodoList";
 import { getTodos, deletedItem } from "./Requests";
 
@@ -25,6 +26,7 @@ export const ToDo = () => {
   // console.log(todos);
   return (
     <>
+      <HeaderUser />
       <AddItem updateDetector={updateDetector} deletedItem={deletedItem} />
       <TodoList list={list} onUpdate={updateDetector} />
     </>
